@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Counter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            top: 0;
+            left: 0;
+        }
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: rgb(141, 153, 153);
+        }
+        .container {
+            width: 100vw;
+            height: 100vh;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content {
+            width: 450px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: aqua;
+            gap: 16px;
+            padding: 24px;
+            border-radius: 16px;
+        }
+        .btn-wrapper {
+            display: flex;
+            gap: 8px;
+        }
+        .btn {
+            font-size: 28px;
+            border-radius: 50%;
+            border: 0px;
+            width: 80px;
+            height: 80px;
+            background-color: white;
+        }
+        .btn:hover {
+            background-color: rgb(226, 226, 226);
+        }
+        .indicator {
+            background-color: beige;
+            padding: 8px;
+            border-radius: 3px;
+            font-size: 24px;
+        }
+        .msg-wrapper {
+            background-color: rgb(39, 155, 155);
+            padding: 16px;
+            border-radius: 8px;
+            color: white;
+            box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.24);
+        }
+        .closeBtn {
+            color: white;
+            background-color: rgb(90, 121, 121);
+            margin-top: 12px;
+            font-size: 16px;
+            padding: 8px;
+            border: 0px;
+            border-radius: 4px;
+        }
+        .closeBtn:hover {
+            background-color: rgb(62, 80, 80);
+        }
+        .closeBtn:active {
+            background-color: rgb(126, 165, 165);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 id="header">Counter</h1>
+            <span class="indicator" id="indicator"></span>
+            <div class="btn-wrapper">
+                <button id="decrease" onclick="decrement()" class="btn">-</button>
+                <button id="reset" onclick="resetNum()" class="btn">reset</button>
+                <button id="increase" onclick="increment()" class="btn">+</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="counter.js"></script>
+</body>
+</html>
