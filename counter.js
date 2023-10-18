@@ -121,6 +121,10 @@ function resetNum(){
     indicator.style.color = '#FFE5E5';
     const docu = document.querySelector('.msg-wrapper');
     if(docu) docu.remove();
+    achievements.plus10 = 0;
+    achievements.plus20 = 0;
+    achievements.minus10 = 0;
+    achievements.minus20 = 0;
     return counter;
 }
 
